@@ -11,7 +11,7 @@
 <body>
     <div class="container mt-4">
         <h1 class="title text-center">Formular</h1>
-        <form action="" id="form">
+        <form  id="form">
             <input 
                 class = "form-control mb-2"
                 type = "text"
@@ -19,27 +19,34 @@
                 placeholder = "give your name"
                 id  = "userName"
                 autocomplete= "off"
-                
+                value = "example"
+                                
                 required
                 minlength="3"
                 maxlength="12"
                 pattern= "^[a-zZ-Z ]*$"
                 title="only letters for name"
             /> 
+            <p class="text-danger mb-2 d-none" id= "alertUserName"></p>
             <input 
                 class = "form-control mb-2"
                 type= "email"
                 name = "userEmail"
                 placeholder = "give your email"
                 id = "userEmail"
-                autocomplete = "off"
+                autocomplete = "off"  
+                value = "example@html.de"              
 
                 required
                 pattern= "^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$"
-                title= ""
-            />   
+                title= "a valid email"
+
+            />  
+            <p class="text-danger mb-2 d-none" id= "alertUserEmail"></p> 
             <button type="submit" class ="btn btn-primary">Send</button>
         </form>
+        <div class="alert alert-success my-2 d-none" id ="alertSuccess">       
+        </div>
     </div>
     <script src="app.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>     
